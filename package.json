@@ -1,0 +1,20 @@
+{
+  "name": "portfolio-pdf-exporter",
+  "version": "1.0.0",
+  "description": "Export Notion portfolio pages to PDF with full styling preservation",
+  "main": "convert.js",
+  "scripts": {
+    "start": "node convert.js"
+  },
+  "keywords": [
+    "notion",
+    "pdf",
+    "export",
+    "portfolio"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^21.0.0"
+  }
+}
