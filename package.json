@@ -4,7 +4,8 @@
   "description": "Export Notion portfolio pages to PDF with full styling preservation",
   "main": "convert.js",
   "scripts": {
-    "start": "node convert.js"
+    "start": "node convert.js",
+    "start:headless": "node convert.js --headless"
   },
   "keywords": [
     "notion",

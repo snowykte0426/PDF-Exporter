@@ -1,8 +1,11 @@
 const puppeteer = require('puppeteer');
 
+const args = process.argv.slice(2);
+const headlessMode = args.includes('--headless');
+
 (async () => {
   const browser = await puppeteer.launch({
-    headless: false,
+    headless: headlessMode,
     args: ['--no-sandbox', '--disable-setuid-sandbox']
   });
   
@@ -14,6 +17,7 @@ const puppeteer = require('puppeteer');
     deviceScaleFactor: 2
   });
   
+  console.log(`Running in ${headlessMode ? 'headless' : 'visible'} mode...`);
   console.log('Loading Notion page...');
   await page.goto('https://amondbabaro.notion.site/kimtaeeun', {
     waitUntil: 'networkidle0',
