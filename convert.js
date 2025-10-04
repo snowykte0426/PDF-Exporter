@@ -3,6 +3,8 @@ const puppeteer = require('puppeteer');
 const args = process.argv.slice(2);
 const headlessMode = args.includes('--headless');
 
+const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
 (async () => {
   let browser;
   
@@ -36,13 +38,13 @@ const headlessMode = args.includes('--headless');
     });
 
     console.log('Page loaded. Waiting for content to render...');
-    await page.waitForTimeout(3000);
+    await wait(3000);
     
     console.log('Scrolling through entire page (loading all content)...');
     await autoScroll(page);
 
     console.log('Waiting for dynamic content to fully load...');
-    await page.waitForTimeout(3000);
+    await wait(3000);
     
     console.log('Generating PDF...');
 
