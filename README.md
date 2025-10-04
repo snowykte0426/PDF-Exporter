@@ -25,13 +25,22 @@ await page.goto('YOUR_NOTION_URL_HERE', {
 
 2. Run the exporter:
 
-**With visible browser (default):**
+**With visible browser (default, single long page):**
 ```bash
 npm start
 ```
 or
 ```bash
 node convert.js
+```
+
+**In A4 format (multiple pages, better readability):**
+```bash
+npm run start:a4
+```
+or
+```bash
+node convert.js --a4
 ```
 
 **In headless mode (background):**
@@ -41,6 +50,15 @@ npm run start:headless
 or
 ```bash
 node convert.js --headless
+```
+
+**Combine A4 format with headless mode:**
+```bash
+npm run start:a4-headless
+```
+or
+```bash
+node convert.js --a4 --headless
 ```
 
 3. Find the generated PDF: `notion-portfolio.pdf`
