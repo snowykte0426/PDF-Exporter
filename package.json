@@ -5,7 +5,9 @@
   "main": "convert.js",
   "scripts": {
     "start": "node convert.js",
-    "start:headless": "node convert.js --headless"
+    "start:headless": "node convert.js --headless",
+    "start:a4": "node convert.js --a4",
+    "start:a4-headless": "node convert.js --a4 --headless"
   },
   "keywords": [
     "notion",
@@ -16,6 +18,6 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "puppeteer": "^24.23.0"
+    "puppeteer": "^21.0.0"
   }
 }
